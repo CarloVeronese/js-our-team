@@ -1,3 +1,5 @@
+const rowDOMElement = document.querySelector('.row')
+
 const teamMembers = [
     {
         name:'Wayne Barnett',
@@ -31,9 +33,24 @@ const teamMembers = [
     }
 ]
 
-for(let i = 0; i < teamMembers.length; i++){
-    currentMember = teamMembers[i]
-    for(let memberInfo in currentMember){
-        console.log(memberInfo + ': ' + currentMember[memberInfo])
+
+function printMembers(){
+    for(let i = 0; i < teamMembers.length; i++){
+        currentMember = teamMembers[i]
+        for(let memberInfo in currentMember){
+            console.log(memberInfo + ': ' + currentMember[memberInfo])
+        }
     }
 }
+
+function createMembersTable(){
+    for(let i = 0; i < teamMembers.length; i++){
+        currentMember = teamMembers[i]
+        for(let memberInfo in currentMember){
+            const memberNewInfo = currentMember[memberInfo]
+            rowDOMElement.innerHTML += `<div class="col-4">${memberNewInfo}</div>`
+        }    
+    }
+}
+
+createMembersTable()

@@ -31,4 +31,9 @@ const teamMembers = [
     }
 ]
 
-console.log(teamMembers)
+for(let i = 0; i < teamMembers.length; i++){
+    currentMember = teamMembers[i]
+    for(let memberInfo in currentMember){
+        console.log(memberInfo + ': ' + currentMember[memberInfo])
+    }
+}

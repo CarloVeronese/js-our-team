@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F5F5F1;
+    padding: 20px 0;
+}
+
+header{
+    padding: 20px 0;
+}
+
+.title{
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.subtitle{
+    color: #827E78;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.col-small{
+    max-width: 600px;
+}
+
+.card-title{
+    font-family: 'Playfair Display', serif;
+}
+
+.card{
+    width: 370px;
+    border-radius: 0;
+}
+
+#team-members{
+    row-gap: 50px;
+}

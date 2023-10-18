@@ -1,5 +1,8 @@
 const rowDOMElement = document.querySelector('.row')
 
+// BONUS 2
+const teamMembersDOMelement = document.getElementById('team-members')
+
 const teamMembers = [
     {
         name:'Wayne Barnett',
@@ -33,11 +36,13 @@ const teamMembers = [
     }
 ]
 
-createMembersTableBonus1()
+// createMembersTable() ESERCITAZIONE
+// createMembersTableBonus1() BONUS 1
+createMembersTableBonus2()
 
 function printMembers(){
     for(let i = 0; i < teamMembers.length; i++){
-        currentMember = teamMembers[i]
+        const currentMember = teamMembers[i]
         for(let memberInfo in currentMember){
             console.log(memberInfo + ': ' + currentMember[memberInfo])
         }
@@ -46,7 +51,7 @@ function printMembers(){
 
 function createMembersTable(){
     for(let i = 0; i < teamMembers.length; i++){
-        currentMember = teamMembers[i]
+        const currentMember = teamMembers[i]
         for(let memberInfo in currentMember){
             const memberNewInfo = currentMember[memberInfo]
             rowDOMElement.innerHTML += `<div class="col-4">${memberNewInfo}</div>`
@@ -54,12 +59,13 @@ function createMembersTable(){
     }
 }
 
-/* BONUS 1 */
+// BONUS 1
 
 function createMembersTableBonus1(){
     for(let i = 0; i < teamMembers.length; i++){
-        currentMember = teamMembers[i]
+        const currentMember = teamMembers[i]
         for(let memberInfo in currentMember){
+   
             const memberNewInfo = currentMember[memberInfo]
             if(memberInfo === 'picture'){
                 rowDOMElement.innerHTML += `<div class="col-4"><img src="./img/${memberNewInfo}" alt=""></div>`
@@ -68,5 +74,27 @@ function createMembersTableBonus1(){
                 rowDOMElement.innerHTML += `<div class="col-4">${memberNewInfo}</div>`
             }
         }    
+    }
+}
+
+// BONUS 2
+
+function createMembersTableBonus2(){
+    for(let i = 0; i < teamMembers.length; i++){
+        const currentMember = teamMembers[i]
+        const currentMemberImg = currentMember.picture
+        const currentMemberName = currentMember.name
+        const currentMemberPosition = currentMember.position
+        const memberCard = `
+        <div class="col-4 d-flex justify-content-center">
+            <div class="card">
+                <img src="./img/${currentMemberImg}" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">${currentMemberName}</h5>
+                    <p class="card-text">${currentMemberPosition}</p>
+                </div>
+            </div>
+        </div>`
+        teamMembersDOMelement.innerHTML += memberCard
     }
 }

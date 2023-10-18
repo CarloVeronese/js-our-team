@@ -17,3 +17,7 @@
 .col-4{
     flex-basis: calc(100% / 12 * 4);
 }
+
+img{
+    width: 100%;
+}

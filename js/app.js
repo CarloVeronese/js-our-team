@@ -33,6 +33,7 @@ const teamMembers = [
     }
 ]
 
+createMembersTableBonus1()
 
 function printMembers(){
     for(let i = 0; i < teamMembers.length; i++){
@@ -53,4 +54,19 @@ function createMembersTable(){
     }
 }
 
-createMembersTable()
+/* BONUS 1 */
+
+function createMembersTableBonus1(){
+    for(let i = 0; i < teamMembers.length; i++){
+        currentMember = teamMembers[i]
+        for(let memberInfo in currentMember){
+            const memberNewInfo = currentMember[memberInfo]
+            if(memberInfo === 'picture'){
+                rowDOMElement.innerHTML += `<div class="col-4"><img src="./img/${memberNewInfo}" alt=""></div>`
+            }
+            else {
+                rowDOMElement.innerHTML += `<div class="col-4">${memberNewInfo}</div>`
+            }
+        }    
+    }
+}

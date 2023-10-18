@@ -87,16 +87,13 @@ function createMembersTableBonus1(){
 function createMembersTableBonus2(){
     for(let i = 0; i < teamMembers.length; i++){
         const currentMember = teamMembers[i]
-        const currentMemberImg = currentMember.picture
-        const currentMemberName = currentMember.name
-        const currentMemberPosition = currentMember.position
         const memberCard = `
         <div class="col-4 d-flex justify-content-center">
             <div class="card">
-                <img src="./img/${currentMemberImg}" alt="">
+                <img src="./img/${currentMember.picture}" alt="">
                 <div class="card-body text-center">
-                    <h5 class="card-title">${currentMemberName}</h5>
-                    <p class="card-text">${currentMemberPosition}</p>
+                    <h5 class="card-title">${currentMember.name}</h5>
+                    <p class="card-text">${currentMember.position}</p>
                 </div>
             </div>
         </div>`

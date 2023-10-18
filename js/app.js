@@ -36,8 +36,13 @@ const teamMembers = [
     }
 ]
 
-// createMembersTable() ESERCITAZIONE
-// createMembersTableBonus1() BONUS 1
+// ESERCITAZIONE
+// createMembersTable()
+
+// BONUS 1
+// createMembersTableBonus1()
+
+// BONUS 2
 createMembersTableBonus2()
 
 function printMembers(){
